@@ -71,7 +71,7 @@ export class App extends Component {
     if (e.code === 'Escape') {
       this.setState({ isModalOpen: false });
     }
-    console.log('close modal');
+
     this.setState({ isModalOpen: false });
   };
 
@@ -79,7 +79,7 @@ export class App extends Component {
     if (e.target.nodeName !== 'IMG') {
       return;
     }
-    console.log(e.target.src);
+
     this.setState({
       largeImg: e.target.src,
       largeImgAlt: e.target.alt,
@@ -89,7 +89,7 @@ export class App extends Component {
 
   render() {
     window.addEventListener('keydown', this.closeModalHandler);
-    console.log(this.state.largeImg);
+
     return (
       <>
         <Navbar>
